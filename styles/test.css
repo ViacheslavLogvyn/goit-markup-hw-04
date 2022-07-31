@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.conteiner {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+  outline: 2px solid red;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.link {
+  display: inline-block;
+  padding: 16px 32px;
+
+  border-radius: 3px;
+  background-color: teal;
+  color: white;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pane {
+  display: none;
+  padding: 8px;
+  border: 1px solid blue;
+  border-radius: 3px;
+}
+
+.is-active {
+  display: block;
+}
+
+.box-1 {
+  width: 180px;
+  height: 80px;
+  background-color: #2e1b1a;
+
+  /*  The value can be pixels  */
+  border-top-left-radius: 30px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;  
+  color: aliceblue;
+  margin: 0 auto;
+}
+
+.box-2 {
+  width: 120px;
+  height: 120px;
+  background-color: #2196f3;
+
+  /*  The value can be percent  */
+  border-radius: 20%;
+  text-align: center;
+}
+
+.box-3 {
+  width: 150px;
+  height: 150px;
+  background-color: #4caf50;
+
+  /*  If the block is a square, settings the radius to 50% will transform it to a circle  */
+  border-radius: 50%;
+}
+
+.box-1,
+.box-2 {
+  margin-bottom: 20px;
+}
+
