@@ -6,7 +6,7 @@
 :root {
   --accent-color: #2196f3;
   --main-text-color: #212121;
-  --main-font-family: "Roboto", "noto", sans-serif;
+  --main-font-family: 'Roboto', 'noto', sans-serif;
   --header-horizontal-gap: 50px;
   --body-horizontal-gap: 30px;
 }
@@ -127,7 +127,7 @@ img {
 .logo-web {
   color: var(--accent-color);
 
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -137,7 +137,7 @@ img {
 
 .logo-studio,
 .logo-studio-footer {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -191,7 +191,15 @@ img {
 
 /* ------------------------ГЕРОЙ------------------------ */
 .hero {
-  background-color: #2f303a;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
+  max-width: 1600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+
   padding-top: 200px;
   padding-right: auto;
   padding-bottom: 200px;
