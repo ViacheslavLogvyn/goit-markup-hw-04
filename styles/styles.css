@@ -2,13 +2,14 @@
 /* main-text-color основний колір тексту - #212121 */
 /* main-text-color основне сімейство шрифтів */
 /* хедер горизонтальний відступ - 50 px */
+/* стандартний відступ на body - 30 px */
 
 :root {
   --accent-color: #2196f3;
   --main-text-color: #212121;
   --main-font-family: 'Roboto', 'noto', sans-serif;
   --header-horizontal-gap: 50px;
-  --body-horizontal-gap: 30px;
+  --body-gap: 30px;
 }
 
 html {
@@ -194,9 +195,10 @@ img {
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg.jpg);
-  max-width: 1600px;
   background-repeat: no-repeat;
   background-size: cover;
+
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 
@@ -338,9 +340,10 @@ img {
 .team-list-content {
   background-color: #fff;
   padding-top: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 16px;
   text-align: center;
 }
+
 .team-title {
   margin-bottom: 10px;
 
@@ -359,6 +362,60 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: var(--body-gap);
+}
+
+.team-social-link {
+  background-color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: #afb1b8; До способу №1 */
+  fill: #afb1b8;
+  /* До способу № 3 */
+}
+
+/* СПОСІБ №1  */
+/* .team-social-link:hover,
+.team-social-link:focus {  До способу №1;
+  color: #fff;
+  background-color: #2196f3;
+}
+.team-soc-icon {  До способу №1
+  fill: currentColor;
+} */
+
+/* СПОСІБ №2  */
+
+/* .team-soc-icon {
+  fill: #afb1b8;
+}
+
+.team-social-link:hover .team-soc-icon,
+.team-social-link:focus .team-soc-icon {
+  fill: #fff;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: #2196f3;
+} */
+
+/* СПОСІБ №3 */
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: #2196f3;
+  fill: #fff;
 }
 
 /* ------------------------ФІЛЬТР------------------------ */
