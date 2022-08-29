@@ -208,6 +208,14 @@ img {
   padding-left: auto;
 }
 
+.principles-img {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: var(--body-gap);
+}
+
 .hero-content {
   text-align: center;
 }
@@ -265,6 +273,12 @@ img {
 
 .principles-list-content {
   width: calc((100% - 90px) / 4);
+}
+
+.principles-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .principles-title {
