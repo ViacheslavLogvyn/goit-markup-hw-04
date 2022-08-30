@@ -432,6 +432,65 @@ img {
   fill: #fff;
 }
 
+/* ------------------------КЛІЄНТИ------------------------ */
+
+.clients {
+  background-color: #fff;
+}
+
+.clients-list {
+  display: flex;
+}
+
+.clients-list-item:not(:last-child) {
+  margin-right: var(--body-gap);
+}
+
+.clients-wrapper {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* fill: #afb1b8; Варіант 2 */
+  color: #afb1b8;
+}
+/* Варіант 1 */
+.clients-wrapper:hover {
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.clients-icon {
+  fill: currentColor;
+}
+
+/* Варіант 2 */
+/* .clients-wrapper:hover {
+  border-color: #2196f3;
+  fill: #2196f3;
+} */
+
+/* Варіант 3 */
+/* .clients-icon {
+  fill: #afb1b8;
+}
+
+.clients-wrapper:hover .clients-icon {
+  fill: #2196f3;
+}
+
+.clients-wrapper:focus .clients-icon {
+  fill: #2196f3;
+}
+
+.clients-wrapper:hover,
+.clients-wrapper:focus {
+  border-color: #2196f3;
+} */
+
 /* ------------------------ФІЛЬТР------------------------ */
 
 .gallery {
