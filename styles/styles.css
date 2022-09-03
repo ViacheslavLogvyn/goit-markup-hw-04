@@ -147,10 +147,6 @@ img {
   color: black;
 }
 
-.logo-studio-footer {
-  color: whitesmoke;
-}
-
 /* ------------------------НАВІГАЦІЯ ХЕДЕР------------------------ */
 .site-nav-list {
   display: flex;
@@ -176,7 +172,21 @@ img {
   margin-left: auto;
 }
 
-.contacts-item {
+.contacts-list {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-list:nth-child(1) {
+  margin-right: var(--header-horizontal-gap);
+}
+
+.contacts-list-item {
+  margin-right: 10px;
+}
+
+.contacts-tel,
+.contacts-mail {
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: 500;
@@ -186,8 +196,31 @@ img {
   color: #757575;
 }
 
-.contacts-header-list .item + .item {
-  margin-left: var(--header-horizontal-gap);
+/* .contacts-tel,
+.contacts-mail {
+  display: inline-flex;
+}
+
+.contacts-mail::before {
+  content: '';
+  width: 16px;
+  height: 12px;
+  background-image: url('//images/icons-nav.svg#icon-envelope');
+}
+
+.contacts-tel::before {
+  content: '';
+  width: 10px;
+  height: 16px;
+} */
+
+.contacts-list:hover .contacts-tel,
+.contacts-list:hover .contacts-mail,
+.contacts-list:hover .contacts-icon-tel,
+.contacts-list:hover .contacts-icon-mail {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+  cursor: pointer;
 }
 
 /* ------------------------ГЕРОЙ------------------------ */
@@ -203,9 +236,7 @@ img {
   margin-right: auto;
 
   padding-top: 200px;
-  padding-right: auto;
   padding-bottom: 200px;
-  padding-left: auto;
 }
 
 .principles-img {
@@ -279,6 +310,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
 }
 
 .principles-title {
@@ -291,6 +324,24 @@ img {
 
   margin-bottom: 10px;
 }
+
+/* .principles-title::before {
+  display: block;
+  content: '';
+  background-color: #f5f4fa;
+  height: 120px;
+  margin-bottom: var(--body-gap);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: center;
+}
+
+Зображення не моє бути в спрайті background-image: url не підтягує svg file зі спрайту
+.antenna::before {
+  background-image: url('../images/antenna\ 1-2.svg');
+} */
+
 .principles-text {
   font-weight: 400;
   font-size: 14px;
@@ -566,6 +617,11 @@ img {
   /* margin-bottom: 30px; */
 }
 
+.gallery-item:hover {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .gallery-content {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -604,6 +660,11 @@ footer {
   padding-bottom: 60px;
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
@@ -631,6 +692,63 @@ footer {
   margin-bottom: 9px;
 }
 
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-soc-icon-list {
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.footer-text {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: var(--body-gap);
+}
+
+.footer-soc-icons {
+  margin-left: 70px;
+  margin-bottom: 100px;
+}
+
+.footer-social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #fff;
+}
+
+.footer-social-link:hover {
+  background-color: var(--accent-color);
+}
+
+.logo-studio-footer {
+  color: whitesmoke;
+}
+
 .info {
   font-style: normal;
   font-weight: 400;
@@ -655,9 +773,7 @@ footer {
 .site-nav-link:hover,
 .site-nav-link:focus,
 .info:hover,
-.info:focus,
-.contacts-item:hover,
-.contacts-item:focus {
+.info:focus {
   color: var(--accent-color);
   cursor: pointer;
 }
